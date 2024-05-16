@@ -1,12 +1,14 @@
 package threads;
 public class MyThread extends Thread {
-
-    public MyThread(){
+    private int[] add;
+    private int pos;
+    public MyThread(int[] addTo,int pos){
+        this.add = addTo;
+        this.pos = pos;
     }
 
     public void run(){
-        for(int i = 0; i <= 9 ; i++){
-            System.out.println(i);
-        }
+        int n = (int)(Math.random()*100+1);
+        add[pos] = n;
     }
 }
